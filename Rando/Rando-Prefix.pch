@@ -1,0 +1,45 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#import "MacroUtils.h"
+
+#define _ToStr(x)	#x
+#define __ToStr(x)	_ToStr(x)
+
+#define noti_UploadSuccess @"UploadSuccess"
+#define noti_FetchSuccess @"FetchSuccess"
+#define noti_APPEnterBackground @"APPEnterBackground"
+#define noti_APPEnterForeground @"APPEnterForeground"
+#define noti_haveOpenMask @"haveOpenMask"
+#define noti_FetchImagesCountSuccess @"FetchImagesCountSuccess"
+
+#define UDFetchNumber @"UDFetchNumber"
+#define UDCameraRadius @"UDCameraRadius"
+#define UDLastDay @"UDLastDay"
+
+//相机大小
+#define CAPTURE_SIZE 280
+#define TIP_TIME 2.0
+
+#define HTTP_SERVER	https:/\/citynews.sinaapp.com/
+
+#define UploadImageUrl       @__ToStr(HTTP_SERVER)"UploadImage"
+#define FetchImageUrl        @__ToStr(HTTP_SERVER)"FetchImage"
+#define LikeImageUrl         @__ToStr(HTTP_SERVER)"LikeImage"
+#define FetchLikeCountUrl    @__ToStr(HTTP_SERVER)"FetchLikeCount"
+#define FetchMyImagesLikeUrl @__ToStr(HTTP_SERVER)"FetchMyImagesLike"
+#define SendMessageUrl       @__ToStr(HTTP_SERVER)"SendMessageToServer"
